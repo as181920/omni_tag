@@ -1,5 +1,7 @@
 require "omni_tag/engine"
 
 module OmniTag
-  # Your code goes here...
+  def self.table_name_prefix
+    "omnitag_"
+  end
 end

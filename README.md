@@ -1,14 +1,14 @@
 # OmniTag
-Short description and motivation.
+通用标签功能(Rails engine)
 
 ## Usage
-How to use my plugin.
+
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'omni_tag'
+gem "omni_tag", git: "git@github.com:as181920/omni_tag.git", branch: "master"
 ```
 
 And then execute:
@@ -16,13 +16,8 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install omni_tag
-```
-
 ## Contributing
-Contribution directions go here.
+fork and make any pull request
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

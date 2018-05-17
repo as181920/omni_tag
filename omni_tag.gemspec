@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = OmniTag::VERSION
   s.authors     = ["Andersen Fan"]
   s.email       = ["as181920@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of OmniTag."
-  s.description = "TODO: Description of OmniTag."
+  s.homepage    = ""
+  s.summary     = "Common tagging for rails, with context support"
+  s.description = "Simple tag support with context, no overkill abstractions"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
