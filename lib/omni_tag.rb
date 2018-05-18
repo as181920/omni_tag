@@ -43,9 +43,9 @@ module OmniTag
   def set_tag_names(names, options={})
     # self.tags = Array(names).compact.uniq.map { |name| ::OmniTag::Tag.by_context(options[:context]).find_or_create_by(name: name) } # Not trigger after_destroy for taggings
 
-    Array(names).tap(&:compact!).tap(&:uniq!)
-    remove_tag_names((tag_names(options) - names), options)
-    Array[options[:context]].each { |cxt| add_tag_names((names - tag_names(context: cxt)), context: cxt) }
+    target_names = Array(names).compact.uniq
+    remove_tag_names((tag_names(options) - target_names), options)
+    Array[options[:context]].each { |cxt| add_tag_names((target_names - tag_names(context: cxt)), context: cxt) }
 
     self.tag_names(options)
   end
