@@ -5,7 +5,11 @@ module OmniTag
 
   included do
     has_many :taggings, as: :taggable, dependent: :destroy, class_name: "::OmniTag::Tagging"
-    has_many :tags, through: :taggings, class_name: "::OmniTag::Tag"
+    has_many :tags, through: :taggings, class_name: "::OmniTag::Tag" do
+      def by_context(context)
+        merge(::OmniTag::Tagging.by_context(context))
+      end
+    end
   end
 
   class_methods do
