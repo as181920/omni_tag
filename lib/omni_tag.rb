@@ -24,6 +24,11 @@ module OmniTag
     context_scope.map(&:name).uniq
   end
 
+  def tagged_with?(name, options={})
+    context_scope = options.has_key?(:context) ?  tags.by_context(options[:context]) : tags
+    context_scope.where(name: name).exists?
+  end
+
   def add_tags(names, options={})
     Array[options[:context]].each do |context|
       Array(names).compact.uniq.each { |name| taggings.find_or_create_by(tag: tag_instance(name), context: context) }
