@@ -11,9 +11,11 @@ Add this line to your application's Gemfile:
 gem "omni_tag", git: "git@github.com:as181920/omni_tag.git", branch: "master"
 ```
 
-And then execute:
-```bash
-$ bundle
+## Known bugs
+
+* linked tagged_with query
+```ruby
+scope.tagged_with("recommend", context: "system").tagged_with("blacklisted", context: "security")
 ```
 
 ## Contributing
