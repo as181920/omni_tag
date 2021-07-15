@@ -1,0 +1,6 @@
+---
+zh-CN:
+  activerecord:
+    attributes:
+      omni_tag/tag:
+        name: "名称"
