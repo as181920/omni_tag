@@ -10,6 +10,7 @@ module OmniTag
     after_destroy :remove_unused_tags
 
     private
+
       def remove_unused_tags
         tag.destroy if tag.reload.taggings_count.zero?
       end
